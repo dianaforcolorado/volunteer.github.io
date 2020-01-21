@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <link rel="stylesheet" href="css/leaflet.css">
+        <link rel="stylesheet" href="css/qgis2web.css"><link rel="stylesheet" href="css/fontawesome-all.min.css">
+        <style>
+        html, body, #map {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+        }
+        </style>
+        <title></title>
+    </head>
+    <body>
+        <div id="map">
+        </div>
+        <script src="js/qgis2web_expressions.js"></script>
+        <script src="js/leaflet.js"></script>
+        <script src="js/leaflet.rotatedMarker.js"></script>
+        <script src="js/leaflet.pattern.js"></script>
+        <script src="js/leaflet-hash.js"></script>
+        <script src="js/Autolinker.min.js"></script>
+        <script src="js/rbush.min.js"></script>
+        <script src="js/labelgun.min.js"></script>
+        <script src="js/labels.js"></script>
+        <script src="data/RegisteredDemocrats_1.js"></script>
+        <script src="data/Library_2.js"></script>
+        <script src="data/PriorityLibrary_3.js"></script>
+        <script src="data/GroceryStore_4.js"></script>
+        <script src="data/PriorityGroceryStore_5.js"></script>
+        <script>
+        var map = L.map('map', {
+            zoomControl:true, maxZoom:24, minZoom:6
+        }).fitBounds([[37.14659142622264,-108.02615213583813],[40.629440280540344,-102.39087543767566]]);
+        var hash = new L.Hash(map);
+        map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
+        var bounds_group = new L.featureGroup([]);
+        function setBounds() {
+        }
+        var layer_OSMStandard_0 = L.tileLayer('http://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            opacity: 1.0,
+            attribution: '<a href="https://www.openstreetmap.org/copyright">© OpenStreetMap contributors, CC-BY-SA</a>',
+            minZoom: 6,
+            maxZoom: 24,
+            minNativeZoom: 0,
+            maxNativeZoom: 19
+        });
+        layer_OSMStandard_0;
+        map.addLayer(layer_OSMStandard_0);
+        function pop_RegisteredDemocrats_1(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['NAME'] !== null ? Autolinker.link(feature.properties['NAME'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['CD116FP'] !== null ? Autolinker.link(feature.properties['CD116FP'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>REG18D</strong><br />' + (feature.properties['REG18D'] !== null ? Autolinker.link(feature.properties['REG18D'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['TOTPOP'] !== null ? Autolinker.link(feature.properties['TOTPOP'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['VAP'] !== null ? Autolinker.link(feature.properties['VAP'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_RegisteredDemocrats_1_0(feature) {
+            if (feature.properties['REG18D'] >= 16.000000 && feature.properties['REG18D'] <= 157.000000 ) {
+                return {
+                pane: 'pane_RegisteredDemocrats_1',
+                opacity: 1,
+                color: 'rgba(35,35,35,0.55)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(247,251,255,0.55)',
+                interactive: true,
+            }
+            }
+            if (feature.properties['REG18D'] >= 157.000000 && feature.properties['REG18D'] <= 274.000000 ) {
+                return {
+                pane: 'pane_RegisteredDemocrats_1',
+                opacity: 1,
+                color: 'rgba(35,35,35,0.55)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(200,221,240,0.55)',
+                interactive: true,
+            }
+            }
+            if (feature.properties['REG18D'] >= 274.000000 && feature.properties['REG18D'] <= 384.000000 ) {
+                return {
+                pane: 'pane_RegisteredDemocrats_1',
+                opacity: 1,
+                color: 'rgba(35,35,35,0.55)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(115,179,216,0.55)',
+                interactive: true,
+            }
+            }
+            if (feature.properties['REG18D'] >= 384.000000 && feature.properties['REG18D'] <= 527.000000 ) {
+                return {
+                pane: 'pane_RegisteredDemocrats_1',
+                opacity: 1,
+                color: 'rgba(35,35,35,0.55)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(40,121,185,0.55)',
+                interactive: true,
+            }
+            }
+            if (feature.properties['REG18D'] >= 527.000000 && feature.properties['REG18D'] <= 1001.000000 ) {
+                return {
+                pane: 'pane_RegisteredDemocrats_1',
+                opacity: 1,
+                color: 'rgba(35,35,35,0.55)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(8,48,107,0.55)',
+                interactive: true,
+            }
+            }
+        }
+        map.createPane('pane_RegisteredDemocrats_1');
+        map.getPane('pane_RegisteredDemocrats_1').style.zIndex = 401;
+        map.getPane('pane_RegisteredDemocrats_1').style['mix-blend-mode'] = 'normal';
+        var layer_RegisteredDemocrats_1 = new L.geoJson(json_RegisteredDemocrats_1, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_RegisteredDemocrats_1',
+            layerName: 'layer_RegisteredDemocrats_1',
+            pane: 'pane_RegisteredDemocrats_1',
+            onEachFeature: pop_RegisteredDemocrats_1,
+            style: style_RegisteredDemocrats_1_0,
+        });
+        bounds_group.addLayer(layer_RegisteredDemocrats_1);
+        map.addLayer(layer_RegisteredDemocrats_1);
+        function pop_Library_2(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2"><strong>City</strong><br />' + (feature.properties['City'] !== null ? Autolinker.link(feature.properties['City'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>Name</strong><br />' + (feature.properties['Name'] !== null ? Autolinker.link(feature.properties['Name'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>Full Addre</strong><br />' + (feature.properties['Full Addre'] !== null ? Autolinker.link(feature.properties['Full Addre'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_Library_2_0() {
+            return {
+                pane: 'pane_Library_2',
+                radius: 4.0,
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(255,210,155,0.7490196078431373)',
+                interactive: true,
+            }
+        }
+        map.createPane('pane_Library_2');
+        map.getPane('pane_Library_2').style.zIndex = 402;
+        map.getPane('pane_Library_2').style['mix-blend-mode'] = 'normal';
+        var layer_Library_2 = new L.geoJson(json_Library_2, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_Library_2',
+            layerName: 'layer_Library_2',
+            pane: 'pane_Library_2',
+            onEachFeature: pop_Library_2,
+            pointToLayer: function (feature, latlng) {
+                var context = {
+                    feature: feature,
+                    variables: {}
+                };
+                return L.circleMarker(latlng, style_Library_2_0(feature));
+            },
+        });
+        bounds_group.addLayer(layer_Library_2);
+        map.addLayer(layer_Library_2);
+        function pop_PriorityLibrary_3(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2"><strong>City</strong><br />' + (feature.properties['City'] !== null ? Autolinker.link(feature.properties['City'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>Name</strong><br />' + (feature.properties['Name'] !== null ? Autolinker.link(feature.properties['Name'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>Full Addre</strong><br />' + (feature.properties['Full Addre'] !== null ? Autolinker.link(feature.properties['Full Addre'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_PriorityLibrary_3_0() {
+            return {
+                pane: 'pane_PriorityLibrary_3',
+                radius: 6.000000000000002,
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(255,206,145,1.0)',
+                interactive: true,
+            }
+        }
+        map.createPane('pane_PriorityLibrary_3');
+        map.getPane('pane_PriorityLibrary_3').style.zIndex = 403;
+        map.getPane('pane_PriorityLibrary_3').style['mix-blend-mode'] = 'normal';
+        var layer_PriorityLibrary_3 = new L.geoJson(json_PriorityLibrary_3, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_PriorityLibrary_3',
+            layerName: 'layer_PriorityLibrary_3',
+            pane: 'pane_PriorityLibrary_3',
+            onEachFeature: pop_PriorityLibrary_3,
+            pointToLayer: function (feature, latlng) {
+                var context = {
+                    feature: feature,
+                    variables: {}
+                };
+                return L.circleMarker(latlng, style_PriorityLibrary_3_0(feature));
+            },
+        });
+        bounds_group.addLayer(layer_PriorityLibrary_3);
+        map.addLayer(layer_PriorityLibrary_3);
+        function pop_GroceryStore_4(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2"><strong>Name</strong><br />' + (feature.properties['Name'] !== null ? Autolinker.link(feature.properties['Name'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>Address</strong><br />' + (feature.properties['Address'] !== null ? Autolinker.link(feature.properties['Address'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_GroceryStore_4_0() {
+            return {
+                pane: 'pane_GroceryStore_4',
+                radius: 4.0,
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(255,117,184,0.7333333333333333)',
+                interactive: true,
+            }
+        }
+        map.createPane('pane_GroceryStore_4');
+        map.getPane('pane_GroceryStore_4').style.zIndex = 404;
+        map.getPane('pane_GroceryStore_4').style['mix-blend-mode'] = 'normal';
+        var layer_GroceryStore_4 = new L.geoJson(json_GroceryStore_4, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_GroceryStore_4',
+            layerName: 'layer_GroceryStore_4',
+            pane: 'pane_GroceryStore_4',
+            onEachFeature: pop_GroceryStore_4,
+            pointToLayer: function (feature, latlng) {
+                var context = {
+                    feature: feature,
+                    variables: {}
+                };
+                return L.circleMarker(latlng, style_GroceryStore_4_0(feature));
+            },
+        });
+        bounds_group.addLayer(layer_GroceryStore_4);
+        map.addLayer(layer_GroceryStore_4);
+        function pop_PriorityGroceryStore_5(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2"><strong>Name</strong><br />' + (feature.properties['Name'] !== null ? Autolinker.link(feature.properties['Name'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>Address</strong><br />' + (feature.properties['Address'] !== null ? Autolinker.link(feature.properties['Address'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_PriorityGroceryStore_5_0() {
+            return {
+                pane: 'pane_PriorityGroceryStore_5',
+                radius: 6.000000000000002,
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(255,135,193,1.0)',
+                interactive: true,
+            }
+        }
+        map.createPane('pane_PriorityGroceryStore_5');
+        map.getPane('pane_PriorityGroceryStore_5').style.zIndex = 405;
+        map.getPane('pane_PriorityGroceryStore_5').style['mix-blend-mode'] = 'normal';
+        var layer_PriorityGroceryStore_5 = new L.geoJson(json_PriorityGroceryStore_5, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_PriorityGroceryStore_5',
+            layerName: 'layer_PriorityGroceryStore_5',
+            pane: 'pane_PriorityGroceryStore_5',
+            onEachFeature: pop_PriorityGroceryStore_5,
+            pointToLayer: function (feature, latlng) {
+                var context = {
+                    feature: feature,
+                    variables: {}
+                };
+                return L.circleMarker(latlng, style_PriorityGroceryStore_5_0(feature));
+            },
+        });
+        bounds_group.addLayer(layer_PriorityGroceryStore_5);
+        map.addLayer(layer_PriorityGroceryStore_5);
+        var baseMaps = {};
+        L.control.layers(baseMaps,{'<img src="legend/PriorityGroceryStore_5.png" /> Priority Grocery Store': layer_PriorityGroceryStore_5,'<img src="legend/GroceryStore_4.png" /> Grocery Store': layer_GroceryStore_4,'<img src="legend/PriorityLibrary_3.png" /> Priority Library': layer_PriorityLibrary_3,'<img src="legend/Library_2.png" /> Library': layer_Library_2,'Registered Democrats<br /><table><tr><td style="text-align: center;"><img src="legend/RegisteredDemocrats_1_161570.png" /></td><td> 16 - 157 </td></tr><tr><td style="text-align: center;"><img src="legend/RegisteredDemocrats_1_1572741.png" /></td><td> 157 - 274 </td></tr><tr><td style="text-align: center;"><img src="legend/RegisteredDemocrats_1_2743842.png" /></td><td> 274 - 384 </td></tr><tr><td style="text-align: center;"><img src="legend/RegisteredDemocrats_1_3845273.png" /></td><td> 384 - 527 </td></tr><tr><td style="text-align: center;"><img src="legend/RegisteredDemocrats_1_52710014.png" /></td><td> 527 - 1001 </td></tr></table>': layer_RegisteredDemocrats_1,"OSM Standard": layer_OSMStandard_0,},{collapsed:false}).addTo(map);
+        setBounds();
+        </script>
+    </body>
+</html>
