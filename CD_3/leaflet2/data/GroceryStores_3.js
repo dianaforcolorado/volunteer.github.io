@@ -1,0 +1,33 @@
+var json_GroceryStores_3 = {
+"type": "FeatureCollection",
+"name": "GroceryStores_3",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "Name": "Save a Lot", "Address": "1110 Bonforte Blvd, Pueblo, CO 81001" }, "geometry": { "type": "Point", "coordinates": [ -104.5945722, 38.2883537 ] } },
+{ "type": "Feature", "properties": { "Name": "Albertsons", "Address": "1601 Hwy 50, West St, Pueblo, CO 81008" }, "geometry": { "type": "Point", "coordinates": [ -104.6279521, 38.3109009 ] } },
+{ "type": "Feature", "properties": { "Name": "Walmart", "Address": "2730 S Prairie Ave, Pueblo, CO 81005" }, "geometry": { "type": "Point", "coordinates": [ -104.6416568, 38.2195319 ] } },
+{ "type": "Feature", "properties": { "Name": "Walmart", "Address": "4200 Dillon Dr, Pueblo, CO 81008" }, "geometry": { "type": "Point", "coordinates": [ -104.6095976, 38.3139442 ] } },
+{ "type": "Feature", "properties": { "Name": "Walmart", "Address": "4080 W Northern Ave, Pueblo, CO 81005" }, "geometry": { "type": "Point", "coordinates": [ -104.6647947, 38.2322482 ] } },
+{ "type": "Feature", "properties": { "Name": "Sam's Club", "Address": "412 Eagleridge Blvd, Pueblo, CO 81008" }, "geometry": { "type": "Point", "coordinates": [ -104.6132404, 38.3179964 ] } },
+{ "type": "Feature", "properties": { "Name": "Kmart", "Address": "3415 N Elizabeth St, Pueblo, CO 81008" }, "geometry": { "type": "Point", "coordinates": [ -104.6170654, 38.3060642 ] } },
+{ "type": "Feature", "properties": { "Name": "Target", "Address": "3300 Dillon Dr, Pueblo, CO 81008" }, "geometry": { "type": "Point", "coordinates": [ -104.6057728, 38.3026587 ] } },
+{ "type": "Feature", "properties": { "Name": "Petsmart", "Address": "4230 N Freeway, Pueblo, CO 81008" }, "geometry": { "type": "Point", "coordinates": [ -104.6126029, 38.3129989 ] } },
+{ "type": "Feature", "properties": { "Name": "Kohl's", "Address": "5627 N Elizabeth St, Pueblo, CO 81008" }, "geometry": { "type": "Point", "coordinates": [ -104.6221655, 38.3315326 ] } },
+{ "type": "Feature", "properties": { "Name": "Walgreens", "Address": "1811 W, US-50, Pueblo, CO 81008" }, "geometry": { "type": "Point", "coordinates": [ -104.6310039, 38.3103118 ] } },
+{ "type": "Feature", "properties": { "Name": "Sprouts", "Address": "1450 W Independent Ave, Grand Junction, CO 81505" }, "geometry": { "type": "Point", "coordinates": [ -108.5865763, 39.0799537 ] } },
+{ "type": "Feature", "properties": { "Name": "Safeway", "Address": "681 Horizon Dr, Grand Junction, CO 81506" }, "geometry": { "type": "Point", "coordinates": [ -108.5513255, 39.1039886 ] } },
+{ "type": "Feature", "properties": { "Name": "City Market", "Address": "630 24 Rd, Grand Junction, CO 81505" }, "geometry": { "type": "Point", "coordinates": [ -108.6075428, 39.0964692 ] } },
+{ "type": "Feature", "properties": { "Name": "City Market", "Address": "2600 N 12th St, Grand Junction, CO 81501" }, "geometry": { "type": "Point", "coordinates": [ -108.5511316, 39.0908643 ] } },
+{ "type": "Feature", "properties": { "Name": "Natural Grocers", "Address": "2464 US-6 #124, Grand Junction, CO 81505" }, "geometry": { "type": "Point", "coordinates": [ -108.5926982, 39.0869725 ] } },
+{ "type": "Feature", "properties": { "Name": "City Market", "Address": "2770 US-50, Grand Junction, CO 81503" }, "geometry": { "type": "Point", "coordinates": [ -108.5390813, 39.0399329 ] } },
+{ "type": "Feature", "properties": { "Name": "Safeway", "Address": "2512 S Broadway, Grand Junction, CO 81507" }, "geometry": { "type": "Point", "coordinates": [ -108.5876151, 39.0631779 ] } },
+{ "type": "Feature", "properties": { "Name": "City Market", "Address": "569 32 Rd, Grand Junction, CO 81504" }, "geometry": { "type": "Point", "coordinates": [ -108.4619338, 39.0867699 ] } },
+{ "type": "Feature", "properties": { "Name": "Walmart", "Address": "2545 Rimrock Ave, Grand Junction, CO 81505" }, "geometry": { "type": "Point", "coordinates": [ -108.5811957, 39.077222 ] } },
+{ "type": "Feature", "properties": { "Name": "Safeway", "Address": "2901 F Rd, Grand Junction, CO 81504" }, "geometry": { "type": "Point", "coordinates": [ -108.5137595, 39.0904177 ] } },
+{ "type": "Feature", "properties": { "Name": "Walmart", "Address": "2881 North Ave, Grand Junction, CO 81501" }, "geometry": { "type": "Point", "coordinates": [ -108.5188608, 39.0761334 ] } },
+{ "type": "Feature", "properties": { "Name": "Family Dollar", "Address": "3000 F Rd, Grand Junction, CO 81504" }, "geometry": { "type": "Point", "coordinates": [ -108.4961873, 39.092151 ] } },
+{ "type": "Feature", "properties": { "Name": "Target", "Address": "2424 Highway 6 and 50, Ste C, Grand Junction, CO 81505" }, "geometry": { "type": "Point", "coordinates": [ -108.6015443, 39.0932828 ] } },
+{ "type": "Feature", "properties": { "Name": "Dollar Tree", "Address": "2401 North Ave #10, Grand Junction, CO 81501" }, "geometry": { "type": "Point", "coordinates": [ -108.5365973, 39.0764385 ] } },
+{ "type": "Feature", "properties": { "Name": "Dollar Tree", "Address": "2535 Rimrock Ave, Grand Junction, CO 81505" }, "geometry": { "type": "Point", "coordinates": [ -108.5836929, 39.0771102 ] } }
+]
+}
